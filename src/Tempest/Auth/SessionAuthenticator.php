@@ -18,7 +18,7 @@ final readonly class SessionAuthenticator implements Authenticator
     public function login(Identifiable $identifiable): void
     {
         $this->session->set(self::SESSION_USER_KEY, [
-            'identifier_field' => $identifiable->identifierField(),
+            'identifier_field' => $identifiable-> identifierField(),
             'identifier_value' => $identifiable->identifierValue(),
         ]);
     }
