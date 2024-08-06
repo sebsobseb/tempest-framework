@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Auth;
 
-use;
-
 final class AuthConfig
 {
     public function __construct(
