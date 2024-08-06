@@ -103,4 +103,9 @@ trait IsRequest
 
         return $query;
     }
+
+    public function validate(): void
+    {
+        // No additional validation done
+    }
 }

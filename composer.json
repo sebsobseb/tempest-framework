@@ -48,6 +48,7 @@
         ],
         "psr-4": {
             "Tempest\\Framework\\": "src/Tempest/Framework/",
+            "Tempest\\Auth\\": "src/Tempest/Auth/",
             "Tempest\\Clock\\": "src/Tempest/Clock/",
             "Tempest\\CommandBus\\": "src/Tempest/CommandBus/",
             "Tempest\\Console\\": "src/Tempest/Console/",
@@ -89,6 +90,7 @@
     },
     "replace": {
         "tempest/core": "self.version",
+        "tempest/auth": "self.version",
         "tempest/clock": "self.version",
         "tempest/command-bus": "self.version",
         "tempest/console": "self.version",
