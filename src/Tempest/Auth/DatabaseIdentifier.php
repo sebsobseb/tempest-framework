@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tempest\Auth;
+namespace Auth;
 
-use Tempest\Auth\Exceptions\InvalidLoginException;
+use Auth\Exceptions\InvalidLoginException;
 use Tempest\Database\Query;
 use function Tempest\make;
 

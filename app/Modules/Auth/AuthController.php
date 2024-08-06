@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Modules\Auth;
 
-use Tempest\Auth\Authenticator;
-use Tempest\Auth\DatabaseAuthenticationCall;
-use Tempest\Auth\Exceptions\InvalidLoginException;
-use Tempest\Auth\IdentifierResolver;
+use Auth\Authenticator;
+use Auth\DatabaseAuthenticationCall;
+use Auth\Exceptions\InvalidLoginException;
+use Auth\IdentifierResolver;
 use Tempest\Container\Tag;
 use Tempest\Http\Get;
 use Tempest\Http\Post;

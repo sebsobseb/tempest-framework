@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tempest\Auth\Exceptions;
+namespace Auth\Exceptions;
 
 use Exception;
 

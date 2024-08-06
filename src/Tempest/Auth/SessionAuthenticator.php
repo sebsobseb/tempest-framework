@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tempest\Auth;
+namespace Auth;
 
 use Tempest\Http\Session\Session;
 

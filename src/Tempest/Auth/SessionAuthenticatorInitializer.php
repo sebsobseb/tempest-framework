@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tempest\Auth;
+namespace Auth;
 
-use Tempest\Auth\Exceptions\MissingIdentifiableException;
+use Auth\Exceptions\MissingIdentifiableException;
 use Tempest\Container\Container;
 use Tempest\Container\Initializer;
 

@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-use Tempest\Auth\AuthConfig;
+use Auth\AuthConfig;
 
 return new AuthConfig();

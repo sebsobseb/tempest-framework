@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Modules\Auth\Models;
 
+use Auth\HasIdentity;
+use Auth\Identifiable;
 use SensitiveParameter;
-use Tempest\Auth\HasIdentity;
-use Tempest\Auth\Identifiable;
 use Tempest\Database\IsModel;
 use Tempest\Database\Model;
 

@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tempest\Auth;
+namespace Auth;
+
+use;
 
 final class AuthConfig
 {
