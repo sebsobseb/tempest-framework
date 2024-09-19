@@ -20,8 +20,8 @@ final class Invalid implements Response
         /** @var \Tempest\Validation\Rule[][] $failingRules */
         array $failingRules = [],
     ) {
-        $uri = $request instanceof PsrRequest ? (string)$request->getUri() : $request->getUri();
-        $body = $request instanceof PsrRequest ? $request->getParsedBody() : $request->getBody();
+        $uri = $request instanceof PsrRequest ? (string)$request->getUri() : $request->uri;
+        $body = $request instanceof PsrRequest ? $request->getParsedBody() : $request->body;
 
         $this->addHeader('Location', $uri);
         $this->status = Status::FOUND;

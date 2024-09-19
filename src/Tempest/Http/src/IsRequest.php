@@ -24,9 +24,14 @@ trait IsRequest
         public string $uri,
         public array $body = [],
         public array $headers = [],
-    ) {
+    )
+    {
         $this->path ??= $this->resolvePath();
         $this->query ??= $this->resolveQuery();
+    }
+
+    public array $cookies {
+        get => get(CookieManager::class)->all();
     }
 
     public function get(string $key, mixed $default = null): mixed
@@ -40,42 +45,6 @@ trait IsRequest
         }
 
         return $default;
-    }
-
-    public function getMethod(): Method
-    {
-        return $this->method;
-    }
-
-    public function getUri(): string
-    {
-        return $this->uri;
-    }
-
-    public function getBody(): array
-    {
-        return $this->body;
-    }
-
-    public function getHeaders(): array
-    {
-        return $this->headers;
-    }
-
-    public function getPath(): string
-    {
-        return $this->path;
-    }
-
-    public function getQuery(): array
-    {
-        return $this->query;
-    }
-
-    /** @return \Tempest\Http\Upload[] */
-    public function getFiles(): array
-    {
-        return $this->files;
     }
 
     public function getSessionValue(string $name): mixed
@@ -92,14 +61,6 @@ trait IsRequest
         $cookies = get(CookieManager::class);
 
         return $cookies->get($name);
-    }
-
-    public function getCookies(): array
-    {
-        /** @var CookieManager $cookies */
-        $cookies = get(CookieManager::class);
-
-        return $cookies->all();
     }
 
     public function validate(): void

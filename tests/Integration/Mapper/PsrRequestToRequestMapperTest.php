@@ -43,7 +43,7 @@ final class PsrRequestToRequestMapperTest extends FrameworkIntegrationTestCase
         $this->assertInstanceOf(PostRequest::class, $request);
         $this->assertEquals('a', $request->title);
         $this->assertEquals('b', $request->text);
-        $this->assertEquals(['x-test' => 'test'], $request->getHeaders());
+        $this->assertEquals(['x-test' => 'test'], $request->headers);
     }
 
     public function test_map_with_with_missing_data(): void
@@ -97,10 +97,10 @@ final class PsrRequestToRequestMapperTest extends FrameworkIntegrationTestCase
             to: Request::class,
         );
 
-        $this->assertCount(1, $request->getFiles());
-        $this->assertInstanceOf(Upload::class, $request->getFiles()[0]);
+        $this->assertCount(1, $request->files);
+        $this->assertInstanceOf(Upload::class, $request->files[0]);
 
-        $upload = $request->getFiles()[0];
+        $upload = $request->files[0];
 
         $this->assertSame('hello', $upload->getStream()->getContents());
         $movePath = __DIR__ . '/Fixtures/upload-moved.txt';
