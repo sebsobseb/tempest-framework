@@ -31,6 +31,7 @@ abstract class FrameworkIntegrationTestCase extends IntegrationTest
         $this->discoveryCache = true;
         $this->discoveryLocations = [
             new DiscoveryLocation('Tests\\Tempest\\Integration\\Console\\Fixtures', __DIR__ . '/Console/Fixtures'),
+            new DiscoveryLocation('Tempest\\CommandBus\\Tests\\Fixtures', __DIR__ . '/../../src/Tempest/CommandBus/tests/Fixtures'),
             new DiscoveryLocation('Tests\\Tempest\\Fixtures', __DIR__ . '/../Fixtures'),
         ];
 
