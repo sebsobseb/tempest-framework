@@ -23,7 +23,6 @@ abstract class CommandBusTestCase extends TestCase
     {
         parent::setUp();
 
-
         $this->kernel = new Kernel(
             root: getcwd(),
             discoveryLocations: [

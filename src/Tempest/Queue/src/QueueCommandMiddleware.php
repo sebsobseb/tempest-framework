@@ -2,10 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tempest\CommandBus\Middleware;
+namespace Tempest\Queue;
 
 use Tempest\CommandBus\CommandBusMiddleware;
-use Tempest\CommandBus\Queue;
 use Tempest\Reflection\ClassReflector;
 
 final readonly class QueueCommandMiddleware implements CommandBusMiddleware
@@ -15,7 +14,8 @@ final readonly class QueueCommandMiddleware implements CommandBusMiddleware
         $class = new ClassReflector($command);
 
         if ($class->hasAttribute(Queue::class)) {
-            // TODO: queue command
+            // TODO: actually store the command
+            ld('hi');
 
             return;
         }

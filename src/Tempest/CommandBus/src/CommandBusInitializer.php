@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tempest\CommandBus;
 
-use Tempest\CommandBus\Middleware\QueueCommandMiddleware;
 use Tempest\Container\Container;
 use Tempest\Container\Initializer;
 use Tempest\Container\Singleton;
+use Tempest\Queue\QueueCommandMiddleware;
 
 final readonly class CommandBusInitializer implements Initializer
 {
